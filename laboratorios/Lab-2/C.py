@@ -45,25 +45,20 @@ def partition(alist,first,last):
 
    return rightmark
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def main():
+    lis=[]
     n=int(stdin.readline().strip())
     a=stdin.readline().strip().split(",")
+    b=list(a[0])
+    c=list(a[len(a)-1])
+    b[0] = ""
+    c[len(c)-1]=""
+    b="".join(b)
+    c="".join(c)
+    a[0]=b
+    a[len(a)-1]=c
     for i in range(len(a)):
-        print(a[i])
-    print(a)
+       lis.append(int(a[i]))
+    q=quickSort(lis)
+    print(q)
 main()
